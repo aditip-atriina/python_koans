@@ -152,17 +152,17 @@ class AboutClasses(Koan):
     def test_str_is_used_explicitly_in_string_interpolation(self):
         fido = self.Dog6("Fido")
 
-        self.assertEqual(__, "My dog is " + str(fido))
+        self.assertEqual("My dog is Fido", "My dog is " + str(fido))
 
     def test_repr_provides_a_more_complete_string_version(self):
         fido = self.Dog6("Fido")
-        self.assertEqual(__, repr(fido))
+        self.assertEqual("<Dog named 'Fido'>" , repr(fido))
 
     def test_all_objects_support_str_and_repr(self):
         seq = [1, 2, 3]
 
-        self.assertEqual(__, str(seq))
-        self.assertEqual(__, repr(seq))
+        self.assertEqual('[1, 2, 3]', str(seq))
+        self.assertEqual('[1, 2, 3]', repr(seq))
 
-        self.assertEqual(__, str("STRING"))
-        self.assertEqual(__, repr("STRING"))
+        self.assertEqual('STRING', str("STRING"))
+        self.assertEqual("'STRING'", repr("STRING"))
